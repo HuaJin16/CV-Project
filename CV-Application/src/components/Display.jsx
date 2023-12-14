@@ -1,7 +1,5 @@
 import React from "react";
 
-function Display() {
-
-}
+function Display() {}
 
 export default Display;
