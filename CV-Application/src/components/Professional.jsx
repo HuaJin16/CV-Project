@@ -4,8 +4,7 @@ function Professional() {
   return (
     <>
       <h1>Professional Experience</h1>
-      <form></form>
-      <div>
+      <form>
         <label>Job Title</label>
         <input key="title" type="text" />
         <label>Company</label>
@@ -16,13 +15,13 @@ function Professional() {
         <input key="start" type="text" />
         <label>End</label>
         <input key="end" type="text" />
-      </div>
-      <div>
-        <button>Submit</button>
-      </div>
-      <div>
-        <button>Edit</button>
-      </div>
+        <div>
+          <button>Submit</button>
+        </div>
+        <div>
+          <button>Edit</button>
+        </div>
+      </form>
     </>
   );
 }
