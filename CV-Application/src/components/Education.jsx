@@ -1,7 +1,13 @@
 import React from "react";
 import { useState } from "react";
 
-function Education() {
+function Education({
+  displaySchool,
+  displayDegree,
+  displayLocation,
+  displayStart,
+  displayEnd,
+}) {
   const initialValues = {
     school: "",
     degree: "",
@@ -21,6 +27,11 @@ function Education() {
   //edits the visibility of form components
   const handleSubmit = (e) => {
     e.preventDefault();
+    displaySchool(formValues.school);
+    displayDegree(formValues.degree);
+    displayLocation(formValues.location);
+    displayStart(formValues.start);
+    displayEnd(formValues.end);
     if (status == "pending") {
       setStatus("submitted");
     } else if (status == "submitted") {
@@ -37,7 +48,7 @@ function Education() {
         {(status == "pending" || status == "editing") && (
           <>
             {" "}
-            <div className="formComponent">
+            <div className="formComponent" id="testing">
               <label>School</label>
               <input
                 type="text"

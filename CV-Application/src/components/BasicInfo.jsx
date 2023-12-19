@@ -1,7 +1,12 @@
 import React from "react";
 import { useState } from "react";
 
-function BasicInfo() {
+function BasicInfo({
+  displayName,
+  displayEmail,
+  displayNumber,
+  displayAddress,
+}) {
   const initialValues = {
     name: "",
     email: "",
@@ -20,6 +25,10 @@ function BasicInfo() {
   //edits the visibility of form components
   const handleSubmit = (e) => {
     e.preventDefault();
+    displayName(formValues.name);
+    displayEmail(formValues.email);
+    displayNumber(formValues.number);
+    displayAddress(formValues.address);
     if (status == "pending") {
       setStatus("submitted");
     } else if (status == "submitted") {
@@ -27,6 +36,7 @@ function BasicInfo() {
     } else if (status == "editing") {
       setStatus("submitted");
     }
+    console.log("name: " + displayName);
   };
 
   return (

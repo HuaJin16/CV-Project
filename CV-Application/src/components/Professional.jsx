@@ -1,10 +1,16 @@
 import React from "react";
 import { useState } from "react";
 
-function Professional() {
+function Professional({
+  displayCompany,
+  displayTitle,
+  displayDescription,
+  displayStart,
+  displayEnd,
+}) {
   const initialValues = {
-    title: "",
     company: "",
+    title: "",
     description: "",
     start: "",
     end: "",
@@ -21,6 +27,11 @@ function Professional() {
   //edits the visibility of form components
   const handleSubmit = (e) => {
     e.preventDefault();
+    displayCompany(formValues.company);
+    displayTitle(formValues.title);
+    displayDescription(formValues.description);
+    displayStart(formValues.start);
+    displayEnd(formValues.end);
     if (status == "pending") {
       setStatus("submitted");
     } else if (status == "submitted") {
