@@ -1,5 +1,7 @@
 import React from "react";
 import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUser } from "@fortawesome/free-solid-svg-icons";
 
 function BasicInfo({
   displayName,
@@ -42,7 +44,11 @@ function BasicInfo({
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <h1>Basic Information</h1>
+        <h1 className="title">
+          <FontAwesomeIcon icon={faUser} />
+          <> </>
+          General Information
+        </h1>
         {(status == "pending" || status == "editing") && (
           <>
             {" "}
@@ -90,7 +96,7 @@ function BasicInfo({
                 onChange={handleChange}
               />
             </div>
-            <div>
+            <div className="btn-container">
               <button>Save</button>
             </div>
           </>
@@ -99,7 +105,7 @@ function BasicInfo({
         {status == "submitted" && (
           <>
             {" "}
-            <div>
+            <div className="btn-container">
               <button>Edit</button>
             </div>
           </>

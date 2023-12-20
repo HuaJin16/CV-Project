@@ -1,4 +1,11 @@
 import React from "react";
+import "../styles/display.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faEnvelope,
+  faPhone,
+  faHouse,
+} from "@fortawesome/free-solid-svg-icons";
 
 function Display({
   name,
@@ -21,25 +28,48 @@ function Display({
       <div className="display">
         <div className="information">
           <h2>{name}</h2>
-          <p>{email}</p>
-          <p>{number}</p>
-          <p>{address}</p>
+          <div className="contact-info">
+            <p>
+              <FontAwesomeIcon icon={faEnvelope} /> <></>
+              {email}
+            </p>
+            <p>
+              <FontAwesomeIcon icon={faPhone} /> <></>
+              {number}
+            </p>
+            <p>
+              <FontAwesomeIcon icon={faHouse} /> <></>
+              {address}
+            </p>
+          </div>
         </div>
         <div className="education">
-          <h3>Education</h3>
-          <p>{school}</p>
-          <p>{degree}</p>
-          <p>{location}</p>
-          <p>{eduStartDate}</p>
-          <p>{eduEndDate}</p>
+          <h3 className="display-info">Education</h3>
+          <hr></hr>
+          <div className="user-info">
+            <p className="component-title">{school}</p>
+            <ul>
+              <li>{degree}</li>
+              <li>{location}</li>
+              <li>
+                {eduStartDate} - {eduEndDate}
+              </li>
+            </ul>
+          </div>
         </div>
         <div className="professional">
-          <h3>Professional Experience</h3>
-          <p>{company}</p>
-          <p>{title}</p>
-          <p>{description}</p>
-          <p>{proStartDate}</p>
-          <p>{proEndDate}</p>
+          <h3 className="display-info">Professional Experience</h3>
+          <hr></hr>
+          <div className="user-info">
+            <p className="component-title">{company}</p>
+            <ul>
+              <li>{title}</li>
+              <li>{description}</li>
+              <li>
+                {proStartDate} - {proEndDate}
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </>

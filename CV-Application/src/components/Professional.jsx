@@ -1,5 +1,7 @@
 import React from "react";
 import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBriefcase } from "@fortawesome/free-solid-svg-icons";
 
 function Professional({
   displayCompany,
@@ -44,21 +46,14 @@ function Professional({
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <h1>Professional Experience</h1>
+        <h1 className="title">
+          {" "}
+          <FontAwesomeIcon icon={faBriefcase} />
+          <> </>EduationProfessional Experience
+        </h1>
         {(status == "pending" || status == "editing") && (
           <>
             {" "}
-            <div className="formComponent">
-              <label>Job Title</label>
-              <input
-                type="text"
-                name="title"
-                placeholder="Enter Job Title"
-                value={formValues.title}
-                required
-                onChange={handleChange}
-              />
-            </div>
             <div className="formComponent">
               <label>Company</label>
               <input
@@ -66,6 +61,17 @@ function Professional({
                 name="company"
                 placeholder="Enter Company"
                 value={formValues.company}
+                required
+                onChange={handleChange}
+              />
+            </div>
+            <div className="formComponent">
+              <label>Job Title</label>
+              <input
+                type="text"
+                name="title"
+                placeholder="Enter Job Title"
+                value={formValues.title}
                 required
                 onChange={handleChange}
               />
@@ -103,7 +109,7 @@ function Professional({
                 onChange={handleChange}
               />
             </div>
-            <div>
+            <div className="btn-container">
               <button>Save</button>
             </div>
           </>
@@ -112,7 +118,7 @@ function Professional({
         {status == "submitted" && (
           <>
             {" "}
-            <div>
+            <div className="btn-container">
               <button>Edit</button>
             </div>
           </>

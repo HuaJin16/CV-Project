@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #f3f4f6;
+  font-family: 'Roboto', sans-serif;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  gap: 48px;
+  padding: 24px 36px;
+  width: 98vw;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 30%;
+}
+
+.cv-display {
+  display: flex;
+  width: 55%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.formComponent {
+  display: flex;
+  flex-direction: column;
+  padding: 4px;
+}
+
+.title{
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+label {
+  font-weight: 500;
+}
+
+input {
+  background-color: #f3f4f6;
+  width: 100%;
+  border: none;
+  border-radius: 12px;
+  padding: 8px;
+  transition: .03s;
+}
+
+input[type = text]:focus{
+  outline: 2px solid dodgerblue;
+}
+
+.btn-container {
+  display: flex; 
+  justify-content: flex-end;
+}
+
+button{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 8px;
+  border-radius: 12px;
+  background-color: dodgerblue;
+  color: white;
+}

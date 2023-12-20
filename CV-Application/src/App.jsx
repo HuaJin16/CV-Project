@@ -4,7 +4,7 @@ import BasicInfo from "./components/BasicInfo";
 import Education from "./components/Education";
 import Professional from "./components/Professional";
 import Display from "./components/Display";
-import "./App.css";
+import "./styles/App.css";
 
 function App() {
   const [name, setName] = useState("Name");
@@ -72,8 +72,8 @@ function App() {
 
   return (
     <>
-      <div className="forms">
-        <div>
+      <div className="content">
+        <div className="form-container">
           <BasicInfo
             displayName={changeName}
             displayEmail={changeEmail}
@@ -95,22 +95,24 @@ function App() {
             displayEnd={changeProfessionalEnd}
           />
         </div>
-        <Display
-          name={name}
-          email={email}
-          number={number}
-          address={address}
-          school={school}
-          degree={degree}
-          location={location}
-          eduStartDate={eduStart}
-          eduEndDate={eduEnd}
-          company={company}
-          title={title}
-          description={description}
-          proStartDate={proStart}
-          proEndDate={proEnd}
-        />
+        <div className="cv-display">
+          <Display
+            name={name}
+            email={email}
+            number={number}
+            address={address}
+            school={school}
+            degree={degree}
+            location={location}
+            eduStartDate={eduStart}
+            eduEndDate={eduEnd}
+            company={company}
+            title={title}
+            description={description}
+            proStartDate={proStart}
+            proEndDate={proEnd}
+          />
+        </div>
       </div>
     </>
   );

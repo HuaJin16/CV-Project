@@ -1,5 +1,7 @@
 import React from "react";
 import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGraduationCap } from "@fortawesome/free-solid-svg-icons";
 
 function Education({
   displaySchool,
@@ -44,7 +46,11 @@ function Education({
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <h1>Eduation</h1>
+        <h1 className="title">
+          {" "}
+          <FontAwesomeIcon icon={faGraduationCap} />
+          <> </>Eduation
+        </h1>
         {(status == "pending" || status == "editing") && (
           <>
             {" "}
@@ -103,7 +109,7 @@ function Education({
                 onChange={handleChange}
               />
             </div>
-            <div>
+            <div className="btn-container">
               <button>Save</button>
             </div>
           </>
@@ -112,7 +118,7 @@ function Education({
         {status == "submitted" && (
           <>
             {" "}
-            <div>
+            <div className="btn-container">
               <button>Edit</button>
             </div>
           </>

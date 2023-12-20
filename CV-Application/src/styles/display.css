@@ -1,0 +1,60 @@
+.display {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+}
+
+.information {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background-color: #054a73;
+    padding: 20px 36px 12px 36px;
+}
+
+.information h2{
+    text-align: center;
+    font-size: 36px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-info p {
+    padding: 0px 12px 12px 12px;
+}
+
+.education {
+    display: flex;
+    flex-direction: column;
+}
+
+.display-info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #054a73;
+    margin: 12px 24px 0px 24px;
+    font-size: 18px;
+}
+
+hr {
+    margin: 0px 24px;
+    border-width: 1px;
+    border-color: black;
+}
+
+.component-title{
+    margin: 8px 24px 0px 24px;
+    font-weight: bold;
+}
+
+ul{
+    margin: 0px 24px 0px 48px;
+}
